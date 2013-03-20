@@ -1,0 +1,16 @@
+<package xmlns="http://expath.org/ns/pkg"
+         name="http://fgeorges.org/lib/calabash-basex-steps"
+         abbrev="calabash-basex-steps"
+         version="0.1.0"
+         spec="1.0">
+
+   <title>BaseX XProc steps for Calabash</title>
+
+   <dependency processor="http://xmlcalabash.com/"/>
+
+   <xproc>
+      <import-uri>http://fgeorges.org/calabash/basex.xpl</import-uri>
+      <file>calabash-basex-lib.xpl</file>
+   </xproc>
+
+</package>
