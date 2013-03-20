@@ -7,7 +7,7 @@
 /* ------------------------------------------------------------------------ */
 
 
-package org.fgeorges.caabash.basex;
+package org.fgeorges.calabash.basex;
 
 import com.xmlcalabash.core.XProcException;
 import com.xmlcalabash.core.XProcRuntime;
