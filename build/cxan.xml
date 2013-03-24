@@ -1,0 +1,21 @@
+<package xmlns="http://cxan.org/ns/package" id="calabash-basex">
+
+   <abstract>
+      The extensions steps for Calabash to talk to BaseX.
+   </abstract>
+
+   <author id="fgeorges">Florent Georges</author>
+
+   <category id="databases">Databases</category>
+   <category id="libs">Libraries</category>
+   <category id="calabash">Calabash</category>
+   <category id="basex">BaseX</category>
+
+   <tag>database</tag>
+   <tag>library</tag>
+   <tag>xquery</tag>
+   <tag>xproc</tag>
+   <tag>calabash</tag>
+   <tag>basex</tag>
+
+</package>
