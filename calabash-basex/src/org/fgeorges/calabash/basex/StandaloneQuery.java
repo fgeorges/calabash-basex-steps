@@ -1,5 +1,5 @@
 /****************************************************************************/
-/*  File:       BasexStandaloneQuery.java                                   */
+/*  File:       StandaloneQuery.java                                        */
 /*  Author:     F. Georges - H2O Consulting                                 */
 /*  Date:       2011-08-31                                                  */
 /*  Tags:                                                                   */
@@ -32,10 +32,10 @@ import org.basex.core.cmd.XQuery;
  * @author Florent Georges
  * @date   2011-08-31
  */
-public class BasexStandaloneQuery
+public class StandaloneQuery
         extends DefaultStep
 {
-    public BasexStandaloneQuery(XProcRuntime runtime, XAtomicStep step)
+    public StandaloneQuery(XProcRuntime runtime, XAtomicStep step)
     {
         super(runtime,step);
     }

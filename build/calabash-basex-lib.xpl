@@ -4,7 +4,7 @@
            pkg:import-uri="http://fgeorges.org/calabash/basex.xpl"
            version="1.0">
 
-   <p:declare-step type="basex:ad-hoc-query">
+   <p:declare-step type="basex:standalone-query">
       <p:input  port="source" primary="true"/>
       <p:output port="result" primary="true"/>
    </p:declare-step>

@@ -4,8 +4,8 @@
    <jar>basex-7.6.jar</jar>
 
    <step>
-      <type>{http://fgeorges.org/ns/calabash/basex}ad-hoc-query</type>
-      <class>org.fgeorges.calabash.basex.BasexStandaloneQuery</class>
+      <type>{http://fgeorges.org/ns/calabash/basex}standalone-query</type>
+      <class>org.fgeorges.calabash.basex.StandaloneQuery</class>
    </step>
 
 </package>
