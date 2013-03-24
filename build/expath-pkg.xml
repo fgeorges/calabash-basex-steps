@@ -1,7 +1,7 @@
 <package xmlns="http://expath.org/ns/pkg"
-         name="http://fgeorges.org/lib/calabash-basex-steps"
-         abbrev="calabash-basex-steps"
-         version="0.1.0"
+         name="http://fgeorges.org/lib/calabash-basex"
+         abbrev="calabash-basex"
+         version="0.2.0"
          spec="1.0">
 
    <title>BaseX XProc steps for Calabash</title>
