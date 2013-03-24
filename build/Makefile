@@ -1,17 +1,18 @@
-NAME=calabash-basex-steps
-VER=0.1.0
+NAME=calabash-basex
+VER=0.2.0
 DIST=$(NAME)-$(VER)
+PROJ=../calabash-basex
 
 pkg:  $(DIST).xar
 dist: $(DIST).zip
 
 $(DIST).xar:
-	( cd ../basex-steps && ant )
+	( cd $(PROJ) && ant )
 	mkdir content
-	cp ../basex-steps/dist/basex-steps.jar content/$(NAME).jar
-	cp ../basex-steps/lib/basex-7.6.jar content/
+	cp $(PROJ)/dist/calabash-basex.jar content/$(NAME).jar
+	cp $(PROJ)/lib/basex-7.6.jar content/
 	cp calabash-basex-lib.xpl content/
-	zip -r $(DIST).xar expath-pkg.xml calabash.xml content/
+	zip -r $(DIST).xar expath-pkg.xml calabash.xml cxan.xml content/
 	rm -rf content/
 
 $(DIST).zip: $(DIST).xar
