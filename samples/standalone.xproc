@@ -8,7 +8,7 @@
 
    <p:import href="http://fgeorges.org/calabash/basex.xpl"/>
 
-   <basex:ad-hoc-query>
+   <basex:standalone-query>
       <p:input port="source">
          <p:inline>
             <c:query>
@@ -16,6 +16,6 @@
             </c:query>
          </p:inline>
       </p:input>
-   </basex:ad-hoc-query>
+   </basex:standalone-query>
 
 </p:declare-step>
