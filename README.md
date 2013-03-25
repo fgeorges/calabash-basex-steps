@@ -6,10 +6,17 @@ Library of XProc steps (including extensions) to talk to BaseX from Calabash.
 Installation
 ------------
 
-Provided as a XAR package.  Download the latest `calabash-basex-x.y.z.xar`
-from the [download area](http://code.google.com/p/xlibs/downloads)
-and install it in you local repository for use by Calabash.  Once
-installed, to use it you simply use to use the following import statement:
+Provided as a XAR package.  Download the latest package version from
+[CXAN](http://test.cxan.org/pkg/calabash-basex) and install it in you
+local repository for use by Calabash.  If you have a CXAN client, all
+you need is:
+
+```
+cxan install calabash-basex
+```
+
+Once installed, to use it you simply use to use the following import
+statement:
 
 ```
 <p:import href="http://fgeorges.org/calabash/basex.xpl"/>
@@ -24,8 +31,8 @@ The steps
 This library defines 2 steps, in the namespace
 `http://fgeorges.org/ns/calabash/basex`:
 
-- basex:standalone-query
-- basex:server-query
+- `basex:standalone-query`
+- `basex:server-query`
 
 The former evaluates a query with the embedded BaseX engine.  The
 latter evaluates a query on an external BaseX server (which is running
