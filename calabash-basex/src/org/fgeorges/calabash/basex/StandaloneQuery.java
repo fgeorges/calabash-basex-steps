@@ -71,7 +71,8 @@ public class StandaloneQuery
         Context ctxt = new Context();
         // TODO: There should be something more efficient than serializing
         // everything and parsing it again...  Besides, if the result is not an
-        // XML document, wrap it into a c:data element.
+        // XML document, wrap it into a c:data element. See Christian's comment on
+        // http://fgeorges.blogspot.be/2011/09/writing-extension-step-for-calabash-to.html.
         String result;
         try {
             result = query.execute(ctxt);

@@ -1,7 +1,10 @@
+# options
 BASEX_JAR=/Library/Java/org/basex/basex-7.6.jar
 BASEX_HOME=-Dorg.basex.path=`pwd`/basex
-BASEX_SRV=org.basex.BaseXServer
-BASEX_CLT=org.basex.BaseXClient
+# commands
+JAVA=java -cp $(BASEX_JAR) $(BASEX_HOME)
+SERVER=$(JAVA) org.basex.BaseXServer -p19984 -e19985
+CLIENT=$(JAVA) org.basex.BaseXClient -p19984 -Uadmin -Padmin
 
 run:
 	rm -rf repo/
@@ -10,15 +13,14 @@ run:
 	xrepo --repo repo install ../build/calabash-basex-0.3.0dev.xar
 	calabash ++repo repo standalone.xproc
 	mkdir basex/
-	java -cp $(BASEX_JAR) $(BASEX_HOME) $(BASEX_SRV) -p19984 -e19985 &
+	$(SERVER) &
 	sleep 2
-	java -cp $(BASEX_JAR) $(BASEX_HOME) $(BASEX_CLT) -p19984 \
-	    -Uadmin -Padmin < create-tests.basex
+	$(CLIENT) < create-tests.basex
 	calabash ++repo repo server.xproc
-	java -cp $(BASEX_JAR) $(BASEX_HOME) $(BASEX_SRV) -p19984 -e19985 stop
+	$(SERVER) stop
 
 start-server:
-	java -cp $(BASEX_JAR) $(BASEX_HOME) $(BASEX_SRV) -p19984 -e19985 &
+	$(SERVER) &
 
 stop-server:
-	java -cp $(BASEX_JAR) $(BASEX_HOME) $(BASEX_SRV) -p19984 -e19985 stop
+	$(SERVER) stop
