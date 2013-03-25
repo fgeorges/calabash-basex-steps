@@ -1,0 +1,2 @@
+CREATE DB tests
+ADD TO hello/world.xml <hello>World!</hello>
