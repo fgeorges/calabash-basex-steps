@@ -88,15 +88,13 @@ public class ServerQuery
      */
     private ClientSession connect(Options options)
     {
+        ClientSession basex;
         try {
             String host = options.host;
             int    port = options.port;
             String user = options.user;
             String pwd  = options.pwd;
-            String db   = options.db;
-            ClientSession basex = new ClientSession(host, port, user, pwd);
-            basex.execute(new Open(db));
-            return basex;
+            basex = new ClientSession(host, port, user, pwd);
         }
         catch ( IOException ex ) {
             StringBuilder msg = new StringBuilder("Error connecting to BaseX, using host=");
@@ -105,11 +103,25 @@ public class ServerQuery
             msg.append(Integer.toString(options.port));
             msg.append(", user=");
             msg.append(options.user);
-            msg.append(", db=");
-            msg.append(options.db);
             msg.append(".");
             throw new XProcException(msg.toString(), ex);
         }
+        try {
+            basex.execute(new Open(options.db));
+        }
+        catch ( IOException ex ) {
+            StringBuilder msg = new StringBuilder("Error opening the database '");
+            msg.append(options.db);
+            msg.append("' on '");
+            msg.append(options.host);
+            msg.append(":");
+            msg.append(Integer.toString(options.port));
+            msg.append("' with user '");
+            msg.append(options.user);
+            msg.append("'.");
+            throw new XProcException(msg.toString(), ex);
+        }
+        return basex;
     }
 
     /**
@@ -129,8 +141,6 @@ public class ServerQuery
             msg.append(Integer.toString(options.port));
             msg.append(", user=");
             msg.append(options.user);
-            msg.append(", db=");
-            msg.append(options.db);
             msg.append(".");
             throw new XProcException(msg.toString(), ex);
         }
