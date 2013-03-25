@@ -9,4 +9,14 @@
       <p:output port="result" primary="true"/>
    </p:declare-step>
 
+   <p:declare-step type="basex:server-query">
+      <p:input  port="source" primary="true"/>
+      <p:output port="result" primary="true"/>
+      <p:option name="host"     required="true"/>
+      <p:option name="port"     required="true"/>
+      <p:option name="user"     required="true"/>
+      <p:option name="password" required="true"/>
+      <p:option name="database" required="true"/>
+   </p:declare-step>
+
 </p:library>

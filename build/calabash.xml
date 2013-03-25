@@ -1,11 +1,16 @@
 <package xmlns="http://xmlcalabash.com/ns/expath-pkg">
 
-   <jar>calabash-basex-steps.jar</jar>
+   <jar>calabash-basex.jar</jar>
    <jar>basex-7.6.jar</jar>
 
    <step>
       <type>{http://fgeorges.org/ns/calabash/basex}standalone-query</type>
       <class>org.fgeorges.calabash.basex.StandaloneQuery</class>
+   </step>
+
+   <step>
+      <type>{http://fgeorges.org/ns/calabash/basex}server-query</type>
+      <class>org.fgeorges.calabash.basex.ServerQuery</class>
    </step>
 
 </package>

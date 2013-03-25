@@ -1,5 +1,5 @@
 NAME=calabash-basex
-VER=0.2.0
+VER=0.3.0dev
 DIST=$(NAME)-$(VER)
 PROJ=../calabash-basex
 
