@@ -1,7 +1,7 @@
 <package xmlns="http://xmlcalabash.com/ns/expath-pkg">
 
    <jar>calabash-basex.jar</jar>
-   <jar>basex-7.6.jar</jar>
+   <jar>basex-7.9.jar</jar>
 
    <step>
       <type>{http://fgeorges.org/ns/calabash/basex}standalone-query</type>
