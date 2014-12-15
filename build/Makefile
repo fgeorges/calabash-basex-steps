@@ -18,8 +18,12 @@ $(DIST).xar:
 $(DIST).zip: $(DIST).xar
 	mkdir $(DIST)
 	cp $(DIST).xar $(DIST)/
-	echo $(VER) > $(DIST)/VERSION
+	echo "Version: $(VER)" > $(DIST)/VERSION
+	echo "Git revision: `git describe --always`" >> $(DIST)/VERSION
 	mkdir $(DIST)/samples
-	cp run-ad-hoc.xproc $(DIST)/samples/
+	cp ../samples/Makefile           $(DIST)/samples/
+	cp ../samples/create-tests.basex $(DIST)/samples/
+	cp ../samples/server.xproc       $(DIST)/samples/
+	cp ../samples/standalone.xproc   $(DIST)/samples/
 	zip -r $(DIST).zip $(DIST)/
 	rm -rf $(DIST)/
