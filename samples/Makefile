@@ -1,5 +1,5 @@
 # options
-BASEX_JAR=/Library/Java/org/basex/basex-7.6.jar
+BASEX_JAR=/Library/Java/org/basex/basex-7.9.jar
 BASEX_HOME=-Dorg.basex.path=`pwd`/basex
 # commands
 JAVA=java -cp $(BASEX_JAR) $(BASEX_HOME)
