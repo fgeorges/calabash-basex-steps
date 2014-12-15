@@ -10,7 +10,7 @@ run:
 	rm -rf repo/
 	rm -rf basex/
 	xrepo create repo
-	xrepo --repo repo install ../build/calabash-basex-0.3.0dev.xar
+	xrepo --repo repo install ../build/calabash-basex-0.4.0.xar
 	calabash ++repo repo standalone.xproc
 	mkdir basex/
 	$(SERVER) &
