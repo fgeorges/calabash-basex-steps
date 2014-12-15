@@ -10,7 +10,7 @@ $(DIST).xar:
 	( cd $(PROJ) && ant )
 	mkdir content
 	cp $(PROJ)/dist/calabash-basex.jar content/$(NAME).jar
-	cp $(PROJ)/lib/basex-7.6.jar content/
+	cp $(PROJ)/lib/basex-7.9.jar content/
 	cp calabash-basex-lib.xpl content/
 	zip -r $(DIST).xar expath-pkg.xml calabash.xml cxan.xml content/
 	rm -rf content/
