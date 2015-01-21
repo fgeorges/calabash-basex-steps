@@ -7,12 +7,12 @@ Installation
 ------------
 
 Provided as a XAR package.  Download the latest package version from
-[CXAN](http://test.cxan.org/pkg/calabash-basex) and install it in you
-local repository for use by Calabash.  If you have a CXAN client, all
-you need to do is:
+[CXAN](http://cxan.org/pkg/fgeorges/calabash-basex) and install it in
+you local repository for use by Calabash.  If you have a CXAN client,
+all you need to do is:
 
 ```
-cxan install calabash-basex
+cxan install fgeorges/calabash-basex
 ```
 
 Once installed, to use it you simply use to use the following import
